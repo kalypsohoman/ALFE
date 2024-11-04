@@ -1,60 +1,39 @@
 <script>
+    import Nav from "$lib/Nav.svelte";
 </script>
 
-<nav>
-    <h1>My App</h1>
-</nav>
 
-<slot />
+<header>
+    <a class="logo" href="/">Chronicle</a>
+    <Nav />
+</header>
+
+<main>
+    <slot />
+</main>
 
 
 <style lang='scss'>
-    nav {
+    header {
         height: 80px;
-        border-bottom: 1px solid white;
+        background-color: rgb(53, 53, 53);
         display: flex;
-        align-items: center;
-        
-        a:first-child {
-            margin-right: auto; // Pushes the first child to the left and others to the right
-            img {
-                width: 200px;
-                margin: 10px;
-            }
-        }
-        .links {
-            display: flex;
-            align-items: flex-end;
-            height: 80px;
-            a {
-                color: white;
-                text-decoration: none;
-                display: flex;
-                font-family: "Mourgen", sans-serif;
-                font-size: 3rem;
-                margin-inline: 10px;
-                margin-bottom: 3px;
-                &:not(.active):hover {  //only applies the hover color change if the class isn't active
-                    color: orange;
-                }
-            }
-            p{
-                display: contents;
-                font-size: 4.5rem;
-            }
+        padding: 20px;
+    }
+    
+    a {
+        font-size: 6rem;
+        font-weight: bold;
+        margin-right: auto; // Pushes the first child to the left and others to the right
+    }
 
-            .active {
-                border-top: solid orange;
-                border-bottom: solid orange;
-                cursor: default;
-            }
-        }
+    main {
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+    }
 
-        // MOBILE STYLING
-        @media (max-width: 850px) {
-            .links {
-                display: none;
-            }
-        }
+    .logo {
+        align-self: center;
     }
 </style>

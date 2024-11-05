@@ -28,9 +28,11 @@
     }
 
     main {
-        padding: 5%;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        height: calc(100vh - 120px);
     }
 
     .logo {

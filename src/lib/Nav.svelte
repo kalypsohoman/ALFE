@@ -7,10 +7,10 @@
     page.subscribe(page => currentPage = page.route.id)
 </script>
 
+
 <nav>
     <a class:active={currentPage === '/'} href={'/'}>home</a>
     <a class:active={currentPage === '/sessions'} href={'/sessions'}>sessions</a>
-
 </nav>
 
 

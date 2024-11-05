@@ -7,6 +7,19 @@
 
 </script>
 
-{#each messages as message}
+<div class="message-container">
+    {#each messages as message}
     <Message {message} />
-{/each}
+    {/each}
+</div>
+
+<style lang='scss'>
+    .message-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+    }
+</style>

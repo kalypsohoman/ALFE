@@ -14,9 +14,7 @@
         justify-content: end;
         align-items: center;
         flex-direction: column;
-        height: 100vh;
+        height: 100%;
         width: 70vw;
-        margin: 0 auto 70px auto;
-        padding: 5px;
     }
 </style>
